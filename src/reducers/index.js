@@ -10,4 +10,3 @@ const rootReducer = combineReducers({
 //everything that state will contain
 
 export default rootReducer;
-
