@@ -11,6 +11,8 @@ import Nav from './nav';
 import SecretList from './secret_list';
 import SignIn from './sign_in';
 import SignUp from './sign_up';
+import SecretData from './secret_data';
+import auth from '../hoc/auth';
 
 
 const App = () => (
@@ -20,9 +22,10 @@ const App = () => (
         <div className="container">
             <Route path="/" exact component={Home} />
             <Route path="/about-us" component={AboutUs} />
-            <Route path="/secret-list" component={SecretList} />
+            <Route path="/secret-list" component={auth(SecretList)} />
             <Route path="/sign-in" component={SignIn} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/secret-data" component={auth(SecretData)} />
         </div>
     </div>
 );

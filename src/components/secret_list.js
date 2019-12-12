@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default props => {
+
+const SecretList = props => {
+
+    console.log('secretList props:', props);
+
     return (
         <div>
-            <h1 className="center">Top Secret List</h1>
+            <h1 className="center red-text">Top Secret List</h1>
 
             <ol>
                 <li>Tom</li>
@@ -16,3 +20,7 @@ export default props => {
         </div>
     );
 }
+
+export default SecretList;
+
+//never hijack the look of the original component
